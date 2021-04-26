@@ -1,0 +1,51 @@
+class Asteroid extends Floater
+{
+
+  protected int myRotation;
+  //protected int myNegCorner;
+  protected int myCorner1, myCorner2, myCorner3, myCorner4, myCorner5, myCorner6, myCorner7, myCorner8, myCorner9, myCorner10, myCorner11, myCorner12, myCorner13, myCorner14, myCorner15, myCorner16;
+  protected double myXSpeedAst, myYSpeedAst;
+  public Asteroid() {
+    myRotation = 1;
+    corners= 8;
+    myCorner1= (int)(Math.random()*20);
+    myCorner2= (int)(Math.random()*20);
+    myCorner3= (int)(Math.random()*20)-20;
+    myCorner4= (int)(Math.random()*20)-20;
+    myCorner5= (int)(Math.random()*20);
+    myCorner6= (int)(Math.random()*20);
+    myCorner7= (int)(Math.random()*20)-20;
+    myCorner8= (int)(Math.random()*20)-20;
+    myCorner9= (int)(Math.random()*20);
+    myCorner10= (int)(Math.random()*20);
+    myCorner11= (int)(Math.random()*20)-20;
+    myCorner12= (int)(Math.random()*20)-20;
+    myCorner13= (int)(Math.random()*20)-20;
+    myCorner14= (int)(Math.random()*20)-20;
+    myCorner15= (int)(Math.random()*20);
+    myCorner16= (int)(Math.random()*20);
+    //myPosCorner= (int)(Math.random()*10);
+    //xCorners= new int[]{-10, -5, 2, 4, 8, 2, -5, -10};
+    //yCorners= new int[]{9, 9, 8, 5, -4, -6, -3, 2};
+    xCorners= new int[]{myCorner1, myCorner2, myCorner3, myCorner4, myCorner5, myCorner6, myCorner7, myCorner8};
+    yCorners= new int[]{myCorner9, myCorner10, myCorner11, myCorner12, myCorner13, myCorner14, myCorner15, myCorner16};
+    myColor= color(255, 255, 255);
+    myCenterX= Math.random()*width;
+    myCenterY= Math.random()*height;
+    myXspeed= 0;
+    myYspeed= 0;
+    myPointDirection= 0;
+    myXSpeedAst = ((Math.random()*10)-5)/10;
+    myYSpeedAst = ((Math.random()*10)-5)/10;
+  }
+  public double getX() {
+      return myCenterX;
+    }
+    public double getY() {
+      return myCenterY;
+    }
+  public void move() {
+    myCenterX += myXSpeedAst;    
+    myCenterY += myYSpeedAst;
+  }
+}
