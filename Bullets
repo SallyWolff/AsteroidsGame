@@ -1,0 +1,13 @@
+class Bullet extends Floater{
+  public Bullet(Spaceship enterprise) {
+    myCenterX = enterprise.getX();
+    myCenterY = enterprise.getY();
+    myXspeed = enterprise.getX();
+    myYspeed = enterprise.getY();
+    myPointDirection = enterprise.getPointDirection();
+    accelerate(.6);
+  }
+  public void show(){
+    ellipse((float)myCenterX,(float)myCenterY, 10, 10);
+  }
+}
